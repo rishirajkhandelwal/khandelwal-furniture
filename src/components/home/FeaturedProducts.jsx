@@ -1,9 +1,13 @@
 import Container from "../common/Container";
 import SectionHeading from "../common/SectionHeading";
 import ProductCard from "./ProductCard";
-import { featuredProducts } from "../../data/featuredProducts";
+import { products } from "../../data/products";
 
 const FeaturedProducts = () => {
+  const featuredProducts = products.filter(
+    (product) => product.featured
+  );
+
   return (
     <section className="bg-white py-20">
       <Container>

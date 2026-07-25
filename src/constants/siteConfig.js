@@ -12,9 +12,21 @@ export const siteConfig = {
 
   email: "info@khandelwalfurniture.in",
 
-  address: "Dhamnod, Madhya Pradesh",
+  address: {
+    line1: "A.B. Road",
+    city: "Dhamnod",
+    landmark: "200 meters away from ICICI Bank Dhamnod Branch",
+  },
 
-  established: 1995,
+    timings: {
+    days: "Tuesday – Sunday",
+    hours: "9:00 AM – 8:00 PM",
+    closed: "Monday",
+  },
+
+  googleMaps: "https://share.google/UK9EyOKigCpSWcp6f",
+
+  established: 1998,
 
   navLinks: [
     { label: "Home", path: "/" },

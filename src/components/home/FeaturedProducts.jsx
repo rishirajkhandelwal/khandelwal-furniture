@@ -1,6 +1,6 @@
 import Container from "../common/Container";
 import SectionHeading from "../common/SectionHeading";
-import ProductCard from "./ProductCard";
+import ProductCard from "../common/ProductCard";
 import { products } from "../../data/products";
 
 const FeaturedProducts = () => {

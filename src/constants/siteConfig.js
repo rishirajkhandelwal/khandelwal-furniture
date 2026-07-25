@@ -1,16 +1,25 @@
 export const siteConfig = {
-  shopName: "Khandelwal Furniture",
+  name: "Khandelwal Furniture",
+
   tagline: "Crafting Beautiful Homes",
 
-  phone: "+91XXXXXXXXXX",
+  description:
+    "Premium handcrafted furniture for homes, offices and commercial interiors.",
 
-  whatsapp: "91XXXXXXXXXX",
+  whatsapp: "919999999999",
 
-  address: "Dhamnod, Madhya Pradesh",
+  phone: "+91 99999 99999",
 
   email: "info@khandelwalfurniture.in",
 
-  instagram: "",
+  address: "Dhamnod, Madhya Pradesh",
 
-  facebook: "",
+  established: 1995,
+
+  navLinks: [
+    { label: "Home", path: "/" },
+    { label: "Products", path: "/products" },
+    { label: "About", path: "/about" },
+    { label: "Contact", path: "/contact" },
+  ],
 };

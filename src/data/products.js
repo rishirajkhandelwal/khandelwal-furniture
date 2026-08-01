@@ -6,129 +6,201 @@ import tv from "../assets/images/products/tv-unit.jpg";
 import office from "../assets/images/products/office.jpg";
 
 export const products = [
-  {
-    id: 1,
-    name: "Luxury Sofa Set",
-    slug: "luxury-sofa-set",
+ {
+  id: 1,
+  name: "Luxury Sofa Set",
+  slug: "luxury-sofa-set",
 
-    category: "Sofa Sets",
+  category: "Sofa Sets",
 
-    featured: true,
+  featured: true,
 
-    price: "Starting from ₹45,000",
+  price: "Starting from ₹45,000",
 
-    image: sofa,
+  image: sofa,
 
-    description:
-      "Premium fabric sofa designed for comfort and elegance.",
+  gallery: [sofa],
 
-    material: "Solid Wood & Premium Fabric",
+  description:
+    "A premium sofa set designed to bring elegance and comfort to your living room. Crafted with a sturdy wooden frame, high-density foam cushions, and premium upholstery for long-lasting durability.",
 
-    dimensions: "Custom Sizes Available",
-  },
+  material: "Solid Wood & Premium Fabric",
 
-  {
-    id: 2,
-    name: "King Size Bed",
-    slug: "king-size-bed",
+  dimensions: "Custom Sizes Available",
 
-    category: "Beds",
+  warranty: "5 Years",
 
-    featured: true,
+  features: [
+    "Premium Fabric Upholstery",
+    "Solid Wood Frame",
+    "High Density Foam Cushions",
+    "Custom Colours Available",
+    "Modern Elegant Design",
+  ],
+},
 
-    price: "Starting from ₹32,000",
+{
+  id: 2,
+  name: "King Size Bed",
+  slug: "king-size-bed",
 
-    image: bed,
+  category: "Beds",
 
-    description:
-      "Modern king-size bed crafted with durable engineered wood.",
+  featured: true,
 
-    material: "Engineered Wood",
+  price: "Starting from ₹32,000",
 
-    dimensions: "78 x 72 inches",
-  },
+  image: bed,
 
-  {
-    id: 3,
-    name: "Modern Wardrobe",
-    slug: "modern-wardrobe",
+  gallery: [bed],
 
-    category: "Wardrobes",
+  description:
+    "A stylish king-size bed designed for maximum comfort and durability. Perfect for modern bedrooms with premium finish and spacious sleeping area.",
 
-    featured: true,
+  material: "Engineered Wood",
 
-    price: "Starting from ₹28,000",
+  dimensions: "78 × 72 Inches",
 
-    image: wardrobe,
+  warranty: "5 Years",
 
-    description:
-      "Spacious wardrobe with multiple storage compartments.",
+  features: [
+    "Premium Finish",
+    "Strong Wooden Structure",
+    "Modern Design",
+    "Easy Maintenance",
+    "Custom Sizes Available",
+  ],
+},
 
-    material: "Engineered Wood",
+{
+  id: 3,
+  name: "Modern Wardrobe",
+  slug: "modern-wardrobe",
 
-    dimensions: "6 x 7 ft",
-  },
+  category: "Wardrobes",
 
-  {
-    id: 4,
-    name: "Dining Table Set",
-    slug: "dining-table-set",
+  featured: true,
 
-    category: "Dining Tables",
+  price: "Starting from ₹28,000",
 
-    featured: false,
+  image: wardrobe,
 
-    price: "Starting from ₹24,000",
+  gallery: [wardrobe],
 
-    image: dining,
+  description:
+    "A spacious wardrobe with multiple storage compartments designed to keep your bedroom organized while adding a modern touch to your interiors.",
 
-    description:
-      "Elegant dining table suitable for modern homes.",
+  material: "Engineered Wood",
 
-    material: "Solid Wood",
+  dimensions: "6 × 7 ft",
 
-    dimensions: "6 Seater",
-  },
+  warranty: "5 Years",
 
-  {
-    id: 5,
-    name: "Premium TV Unit",
-    slug: "premium-tv-unit",
+  features: [
+    "Multiple Storage Compartments",
+    "Premium Laminate Finish",
+    "Smooth Sliding Hinges",
+    "Durable Construction",
+    "Custom Design Options",
+  ],
+},
 
-    category: "TV Units",
+{
+  id: 4,
+  name: "Dining Table Set",
+  slug: "dining-table-set",
 
-    featured: false,
+  category: "Dining Tables",
 
-    price: "Starting from ₹18,000",
+  featured: false,
 
-    image: tv,
+  price: "Starting from ₹24,000",
 
-    description:
-      "Contemporary TV unit with ample storage.",
+  image: dining,
 
-    material: "Engineered Wood",
+  gallery: [dining],
 
-    dimensions: "6 ft",
-  },
+  description:
+    "Elegant dining table set crafted for everyday family dining as well as special occasions. Designed with durability and timeless style in mind.",
 
-  {
-    id: 6,
-    name: "Office Workstation",
-    slug: "office-workstation",
+  material: "Solid Wood",
 
-    category: "Office Furniture",
+  dimensions: "6 Seater",
 
-    featured: false,
+  warranty: "5 Years",
 
-    price: "Starting from ₹15,000",
+  features: [
+    "Premium Wooden Finish",
+    "Comfortable Seating",
+    "Strong & Durable Frame",
+    "Scratch Resistant Surface",
+    "Suitable for Modern Homes",
+  ],
+},
 
-    image: office,
+{
+  id: 5,
+  name: "Premium TV Unit",
+  slug: "premium-tv-unit",
 
-    description:
-      "Professional workstation for offices and home offices.",
+  category: "TV Units",
 
-    material: "Engineered Wood",
+  featured: false,
 
-    dimensions: "Custom Sizes Available",
-  },
+  price: "Starting from ₹18,000",
+
+  image: tv,
+
+  gallery: [tv],
+
+  description:
+    "A contemporary TV unit designed to organize your entertainment area with spacious shelves and a premium modern finish.",
+
+  material: "Engineered Wood",
+
+  dimensions: "6 ft",
+
+  warranty: "5 Years",
+
+  features: [
+    "Cable Management",
+    "Storage Cabinets",
+    "Premium Finish",
+    "Modern Design",
+    "Easy Maintenance",
+  ],
+},
+
+{
+  id: 6,
+  name: "Office Workstation",
+  slug: "office-workstation",
+
+  category: "Office Furniture",
+
+  featured: false,
+
+  price: "Starting from ₹15,000",
+
+  image: office,
+
+  gallery: [office],
+
+  description:
+    "Professional office workstation designed for productivity, comfort, and efficient workspace management. Ideal for offices and home offices.",
+
+  material: "Engineered Wood",
+
+  dimensions: "Custom Sizes Available",
+
+  warranty: "3 Years",
+
+  features: [
+    "Spacious Work Area",
+    "Cable Management",
+    "Premium Finish",
+    "Custom Sizes Available",
+    "Ideal for Office & Home Office",
+  ],
+},
 ];

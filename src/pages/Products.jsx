@@ -1,5 +1,4 @@
-import { useState } from "react";
-
+import { useSearchParams } from "react-router-dom";
 import Container from "../components/common/Container";
 import PageHeader from "../components/common/PageHeader";
 import ProductCard from "../components/common/ProductCard";
@@ -9,7 +8,18 @@ import { products } from "../data/products";
 import { categories } from "../data/categories";
 
 const Products = () => {
-  const [selectedCategory, setSelectedCategory] = useState("all");
+ const [searchParams, setSearchParams] = useSearchParams();
+
+const selectedCategory =
+  searchParams.get("category") || "all";
+
+const handleCategoryChange = (category) => {
+  if (category === "all") {
+    setSearchParams({});
+  } else {
+    setSearchParams({ category });
+  }
+};
 
   const filterCategories = [
     {
@@ -42,7 +52,7 @@ const Products = () => {
           <CategoryFilter
             categories={filterCategories}
             selectedCategory={selectedCategory}
-            onCategoryChange={setSelectedCategory}
+            onCategoryChange={handleCategoryChange}
           />
 
           <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

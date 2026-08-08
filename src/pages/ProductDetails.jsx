@@ -1,10 +1,18 @@
 import { Link, useParams } from "react-router-dom";
+import { useEffect } from "react";
 import { products } from "../data/products";
+import RelatedProducts from "../components/products/RelatedProducts";
 import Button from "../components/common/Button";
 import { getWhatsAppLink } from "../utils/whatsapp";
 
 const ProductDetails = () => {
   const { slug } = useParams();
+  useEffect(() => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+     });
+}, [slug]);
 
   const product = products.find((item) => item.slug === slug);
 
@@ -130,7 +138,7 @@ const ProductDetails = () => {
           </div>
 
         </div>
-
+             <RelatedProducts currentProduct={product} />
       </div>
     </section>
   );

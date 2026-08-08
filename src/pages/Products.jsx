@@ -1,7 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 
 import Container from "../components/common/Container";
-import PageHeader from "../components/common/PageHeader";
 import ProductCard from "../components/common/ProductCard";
 import CategoryFilter from "../components/products/CategoryFilter";
 
@@ -17,6 +16,9 @@ const Products = () => {
   const selectedSubCategory =
     searchParams.get("subcategory") || "all";
 
+  const searchQuery =
+    searchParams.get("search") || "";
+
   const filterCategories = [
     {
       id: "all",
@@ -24,6 +26,10 @@ const Products = () => {
     },
     ...categories,
   ];
+
+  // ---------------------------------------------------------
+  // Main Category
+  // ---------------------------------------------------------
 
   const handleCategoryChange = (category) => {
     if (category === "all") {
@@ -43,6 +49,10 @@ const Products = () => {
             product.department === selectedCategory
         );
 
+  // ---------------------------------------------------------
+  // Subcategories
+  // ---------------------------------------------------------
+
   const subCategories = [
     "all",
     ...new Set(
@@ -52,7 +62,7 @@ const Products = () => {
     ),
   ];
 
-  const filteredProducts =
+  const subCategoryProducts =
     selectedSubCategory === "all"
       ? categoryProducts
       : categoryProducts.filter(
@@ -63,10 +73,17 @@ const Products = () => {
   const handleSubCategoryChange = (subCategory) => {
     if (subCategory === "all") {
       if (selectedCategory === "all") {
-        setSearchParams({});
+        setSearchParams(
+          searchQuery
+            ? { search: searchQuery }
+            : {}
+        );
       } else {
         setSearchParams({
           category: selectedCategory,
+          ...(searchQuery
+            ? { search: searchQuery }
+            : {}),
         });
       }
 
@@ -76,19 +93,87 @@ const Products = () => {
     setSearchParams({
       category: selectedCategory,
       subcategory: subCategory,
+      ...(searchQuery
+        ? { search: searchQuery }
+        : {}),
     });
   };
 
+  // ---------------------------------------------------------
+  // Search
+  // ---------------------------------------------------------
+
+  const handleSearchChange = (event) => {
+    const value = event.target.value;
+
+    const params = {};
+
+    if (selectedCategory !== "all") {
+      params.category = selectedCategory;
+    }
+
+    if (selectedSubCategory !== "all") {
+      params.subcategory = selectedSubCategory;
+    }
+
+    if (value.trim()) {
+      params.search = value;
+    }
+
+    setSearchParams(params);
+  };
+
+  // ---------------------------------------------------------
+  // Final Product Filtering
+  // ---------------------------------------------------------
+
+  const filteredProducts =
+    searchQuery.trim() === ""
+      ? subCategoryProducts
+      : subCategoryProducts.filter((product) => {
+          const query = searchQuery
+            .toLowerCase()
+            .trim();
+
+          const searchableText = [
+            product.name,
+            product.department,
+            product.subCategory,
+            product.brand,
+            //product.description,
+            product.material,
+           // ...(product.features || []),
+          ]
+            .filter(Boolean)
+            .join(" ")
+            .toLowerCase();
+
+          return searchableText.includes(query);
+        });
+
   return (
     <>
-      <PageHeader
-        eyebrow="Our Collection"
-        title="Furniture for Every Space"
-        description="Browse our collection of furniture for homes, offices, institutions and more."
-      />
-
       <section className="bg-white pb-24">
         <Container>
+
+          {/* Search */}
+          <div className="mx-auto mb-8 max-w-2xl">
+            <label
+              htmlFor="product-search"
+              className="mb-2 block text-sm font-medium text-gray-700"
+            >
+              Search Furniture
+            </label>
+
+            <input
+              id="product-search"
+              type="search"
+              value={searchQuery}
+              onChange={handleSearchChange}
+              placeholder="Search sofa, wardrobe, chair, Kurlon..."
+              className="w-full rounded-xl border border-gray-200 bg-white px-5 py-3 text-gray-900 outline-none transition focus:border-[#7A4E2D] focus:ring-2 focus:ring-[#7A4E2D]/20"
+            />
+          </div>
 
           {/* Main Categories */}
           <CategoryFilter
@@ -128,6 +213,30 @@ const Products = () => {
               </div>
             )}
 
+          {/* Search Result Information */}
+          <div className="mt-6 text-center text-sm text-gray-500">
+            {searchQuery ? (
+              <>
+                Showing {filteredProducts.length} result
+                {filteredProducts.length !== 1
+                  ? "s"
+                  : ""}{" "}
+                for "
+                <span className="font-medium text-gray-700">
+                  {searchQuery}
+                </span>
+                "
+              </>
+            ) : (
+              <>
+                Showing {filteredProducts.length} product
+                {filteredProducts.length !== 1
+                  ? "s"
+                  : ""}
+              </>
+            )}
+          </div>
+
           {/* Products */}
           <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {filteredProducts.map((product) => (
@@ -146,7 +255,8 @@ const Products = () => {
               </h2>
 
               <p className="mt-3 text-gray-600">
-                We are adding more products to this collection soon.
+                Try a different search or browse another
+                category.
               </p>
             </div>
           )}

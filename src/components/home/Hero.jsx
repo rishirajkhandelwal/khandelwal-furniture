@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import heroImage from "../../assets/images/hero.jpg";
 import Button from "../common/Button";
+import { siteConfig } from "../../constants/siteConfig";
 
 export default function Hero() {
   return (
@@ -11,7 +12,7 @@ export default function Hero() {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/55" />
+      <div className="absolute inset-0 bg-black/45" />
 
       <div className="relative mx-auto flex h-full max-w-7xl items-center px-6">
         <motion.div
@@ -34,12 +35,22 @@ export default function Hero() {
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            <Button variant="primary">
-                 Explore Collection
+            {/* Explore Collection */}
+            <Button
+              to="/products"
+              variant="primary"
+            >
+              Explore Collection
             </Button>
 
-            <Button variant="outline">
-                 Get Best Price
+            {/* Get Best Price */}
+            <Button
+              href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(
+                "Hi Khandelwal Furniture, I would like to know more about your furniture collection and pricing."
+              )}`}
+              variant="outline"
+            >
+              Get Best Price
             </Button>
           </div>
         </motion.div>

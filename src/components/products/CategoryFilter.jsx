@@ -4,21 +4,21 @@ const CategoryFilter = ({
   onCategoryChange,
 }) => {
   return (
-    <div className="mb-12 flex flex-wrap justify-center gap-3">
+    <div className="flex flex-wrap justify-center gap-3">
       {categories.map((category) => {
-        const isActive = selectedCategory === category;
+        const isActive = selectedCategory === category.id;
 
         return (
           <button
-            key={category}
-            onClick={() => onCategoryChange(category)}
+            key={category.id}
+            onClick={() => onCategoryChange(category.id)}
             className={`rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300 ${
               isActive
                 ? "bg-[var(--primary)] text-white shadow-md"
                 : "bg-gray-100 text-gray-700 hover:bg-gray-200"
             }`}
           >
-            {category}
+            {category.name}
           </button>
         );
       })}

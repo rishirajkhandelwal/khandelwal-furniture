@@ -6,201 +6,219 @@ import tv from "../assets/images/products/tv-unit.jpg";
 import office from "../assets/images/products/office.jpg";
 
 export const products = [
- {
-  id: 1,
-  name: "Luxury Sofa Set",
-  slug: "luxury-sofa-set",
+  {
+    id: 1,
+    name: "Luxury Sofa Set",
+    slug: "luxury-sofa-set",
 
-  category: "Sofa Sets",
+    department: "living-room",
+    subCategory: "Sofa Sets",
 
-  featured: true,
+    brand: "Khandelwal Collection",
+    availability: "In Store",
 
-  price: "Starting from ₹45,000",
+    featured: true,
 
-  image: sofa,
+    price: "Starting from ₹45,000",
 
-  gallery: [sofa],
+    image: sofa,
+    gallery: [sofa],
 
-  description:
-    "A premium sofa set designed to bring elegance and comfort to your living room. Crafted with a sturdy wooden frame, high-density foam cushions, and premium upholstery for long-lasting durability.",
+    description:
+      "A premium sofa set designed to bring elegance and comfort to your living room. Crafted with a sturdy wooden frame, high-density foam cushions, and premium upholstery for long-lasting durability.",
 
-  material: "Solid Wood & Premium Fabric",
+    material: "Solid Wood & Premium Fabric",
 
-  dimensions: "Custom Sizes Available",
+    dimensions: "Custom Sizes Available",
 
-  warranty: "5 Years",
+    warranty: "5 Years",
 
-  features: [
-    "Premium Fabric Upholstery",
-    "Solid Wood Frame",
-    "High Density Foam Cushions",
-    "Custom Colours Available",
-    "Modern Elegant Design",
-  ],
-},
+    features: [
+      "Premium Fabric Upholstery",
+      "Solid Wood Frame",
+      "High Density Foam Cushions",
+      "Custom Colours Available",
+      "Modern Elegant Design",
+    ],
+  },
 
-{
-  id: 2,
-  name: "King Size Bed",
-  slug: "king-size-bed",
+  {
+    id: 2,
+    name: "King Size Bed",
+    slug: "king-size-bed",
 
-  category: "Beds",
+    department: "bedroom",
+    subCategory: "Beds",
 
-  featured: true,
+    brand: "Khandelwal Collection",
+    availability: "In Store",
 
-  price: "Starting from ₹32,000",
+    featured: true,
 
-  image: bed,
+    price: "Starting from ₹32,000",
 
-  gallery: [bed],
+    image: bed,
+    gallery: [bed],
 
-  description:
-    "A stylish king-size bed designed for maximum comfort and durability. Perfect for modern bedrooms with premium finish and spacious sleeping area.",
+    description:
+      "A stylish king-size bed designed for maximum comfort and durability. Perfect for modern bedrooms with premium finish and spacious sleeping area.",
 
-  material: "Engineered Wood",
+    material: "Engineered Wood",
 
-  dimensions: "78 × 72 Inches",
+    dimensions: "78 × 72 Inches",
 
-  warranty: "5 Years",
+    warranty: "5 Years",
 
-  features: [
-    "Premium Finish",
-    "Strong Wooden Structure",
-    "Modern Design",
-    "Easy Maintenance",
-    "Custom Sizes Available",
-  ],
-},
+    features: [
+      "Premium Finish",
+      "Strong Wooden Structure",
+      "Modern Design",
+      "Easy Maintenance",
+      "Custom Sizes Available",
+    ],
+  },
 
-{
-  id: 3,
-  name: "Modern Wardrobe",
-  slug: "modern-wardrobe",
+  {
+    id: 3,
+    name: "Modern Wardrobe",
+    slug: "modern-wardrobe",
 
-  category: "Wardrobes",
+    department: "bedroom",
+    subCategory: "Wardrobes",
 
-  featured: true,
+    brand: "Khandelwal Collection",
+    availability: "In Store",
 
-  price: "Starting from ₹28,000",
+    featured: true,
 
-  image: wardrobe,
+    price: "Starting from ₹28,000",
 
-  gallery: [wardrobe],
+    image: wardrobe,
+    gallery: [wardrobe],
 
-  description:
-    "A spacious wardrobe with multiple storage compartments designed to keep your bedroom organized while adding a modern touch to your interiors.",
+    description:
+      "A spacious wardrobe with multiple storage compartments designed to keep your bedroom organized while adding a modern touch to your interiors.",
 
-  material: "Engineered Wood",
+    material: "Engineered Wood",
 
-  dimensions: "6 × 7 ft",
+    dimensions: "6 × 7 ft",
 
-  warranty: "5 Years",
+    warranty: "5 Years",
 
-  features: [
-    "Multiple Storage Compartments",
-    "Premium Laminate Finish",
-    "Smooth Sliding Hinges",
-    "Durable Construction",
-    "Custom Design Options",
-  ],
-},
+    features: [
+      "Multiple Storage Compartments",
+      "Premium Laminate Finish",
+      "Smooth Sliding Hinges",
+      "Durable Construction",
+      "Custom Design Options",
+    ],
+  },
 
-{
-  id: 4,
-  name: "Dining Table Set",
-  slug: "dining-table-set",
+  {
+    id: 4,
+    name: "Dining Table Set",
+    slug: "dining-table-set",
 
-  category: "Dining Tables",
+    department: "dining",
+    subCategory: "Dining Tables",
 
-  featured: false,
+    brand: "Khandelwal Collection",
+    availability: "In Store",
 
-  price: "Starting from ₹24,000",
+    featured: false,
 
-  image: dining,
+    price: "Starting from ₹24,000",
 
-  gallery: [dining],
+    image: dining,
+    gallery: [dining],
 
-  description:
-    "Elegant dining table set crafted for everyday family dining as well as special occasions. Designed with durability and timeless style in mind.",
+    description:
+      "Elegant dining table set crafted for everyday family dining as well as special occasions. Designed with durability and timeless style in mind.",
 
-  material: "Solid Wood",
+    material: "Solid Wood",
 
-  dimensions: "6 Seater",
+    dimensions: "6 Seater",
 
-  warranty: "5 Years",
+    warranty: "5 Years",
 
-  features: [
-    "Premium Wooden Finish",
-    "Comfortable Seating",
-    "Strong & Durable Frame",
-    "Scratch Resistant Surface",
-    "Suitable for Modern Homes",
-  ],
-},
+    features: [
+      "Premium Wooden Finish",
+      "Comfortable Seating",
+      "Strong & Durable Frame",
+      "Scratch Resistant Surface",
+      "Suitable for Modern Homes",
+    ],
+  },
 
-{
-  id: 5,
-  name: "Premium TV Unit",
-  slug: "premium-tv-unit",
+  {
+    id: 5,
+    name: "Premium TV Unit",
+    slug: "premium-tv-unit",
 
-  category: "TV Units",
+    department: "living-room",
+    subCategory: "TV Units",
 
-  featured: false,
+    brand: "Khandelwal Collection",
+    availability: "In Store",
 
-  price: "Starting from ₹18,000",
+    featured: false,
 
-  image: tv,
+    price: "Starting from ₹18,000",
 
-  gallery: [tv],
+    image: tv,
+    gallery: [tv],
 
-  description:
-    "A contemporary TV unit designed to organize your entertainment area with spacious shelves and a premium modern finish.",
+    description:
+      "A contemporary TV unit designed to organize your entertainment area with spacious shelves and a premium modern finish.",
 
-  material: "Engineered Wood",
+    material: "Engineered Wood",
 
-  dimensions: "6 ft",
+    dimensions: "6 ft",
 
-  warranty: "5 Years",
+    warranty: "5 Years",
 
-  features: [
-    "Cable Management",
-    "Storage Cabinets",
-    "Premium Finish",
-    "Modern Design",
-    "Easy Maintenance",
-  ],
-},
+    features: [
+      "Cable Management",
+      "Storage Cabinets",
+      "Premium Finish",
+      "Modern Design",
+      "Easy Maintenance",
+    ],
+  },
 
-{
-  id: 6,
-  name: "Office Workstation",
-  slug: "office-workstation",
+  {
+    id: 6,
+    name: "Office Workstation",
+    slug: "office-workstation",
 
-  category: "Office Furniture",
+    department: "office",
+    subCategory: "Office Workstations",
 
-  featured: false,
+    brand: "Khandelwal Collection",
+    availability: "In Store",
 
-  price: "Starting from ₹15,000",
+    featured: false,
 
-  image: office,
+    price: "Starting from ₹15,000",
 
-  gallery: [office],
+    image: office,
+    gallery: [office],
 
-  description:
-    "Professional office workstation designed for productivity, comfort, and efficient workspace management. Ideal for offices and home offices.",
+    description:
+      "Professional office workstation designed for productivity, comfort, and efficient workspace management. Ideal for offices and home offices.",
 
-  material: "Engineered Wood",
+    material: "Engineered Wood",
 
-  dimensions: "Custom Sizes Available",
+    dimensions: "Custom Sizes Available",
 
-  warranty: "3 Years",
+    warranty: "3 Years",
 
-  features: [
-    "Spacious Work Area",
-    "Cable Management",
-    "Premium Finish",
-    "Custom Sizes Available",
-    "Ideal for Office & Home Office",
-  ],
-},
+    features: [
+      "Spacious Work Area",
+      "Cable Management",
+      "Premium Finish",
+      "Custom Sizes Available",
+      "Ideal for Office & Home Office",
+    ],
+  },
 ];
